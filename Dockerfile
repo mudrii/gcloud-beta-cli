@@ -26,7 +26,6 @@ RUN apk --no-cache update && \
     gcloud config set metrics/environment github_docker_image && \
     gcloud components install beta  --quiet && \
     rm -rf /google-cloud-sdk/.install/.backup && \
-    apk --purge del curl && \
-    rm /var/cache/apk/*
+    apk --purge del curl
 
 USER mudrii
